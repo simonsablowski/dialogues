@@ -1,0 +1,40 @@
+/* General defintions */
+
+body {
+	font-family: georgia, times, serif;
+	letter-spacing: 1px;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Body */
+
+#body h2 {
+	font-size: 32px;
+	line-height: 40px;
+}
+
+#body input {
+	border: 0 none;
+}
+
+#body textarea {
+	border: 0 none;
+}
+
+/* Special */
+
+#body .dialogue .date {
+	font-size: smaller;
+	text-align: right;
+}
+
+#body .dialogue .message .author {
+	border-top: 1px solid;
+}
+
+#body .dialogue .message .date {
+	float: right;
+}

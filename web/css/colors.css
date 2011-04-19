@@ -1,0 +1,51 @@
+/* #fff */
+
+body {
+	background-color: #fff;
+}
+
+#head a {
+	color: #fff;
+}
+
+#body input[type="submit"] {
+	color: #fff;
+}
+
+#body .dialogue .message .author {
+	border-color: #fff;
+}
+
+/* #fee */
+
+#body input {
+	background-color: #fee;
+}
+
+#body textarea {
+	background-color: #fee;
+}
+
+#body .dialogue {
+	background-color: #fee;
+}
+
+/* #9ca */
+
+#head {
+	background-color: #9ca;
+}
+
+#body a {
+	color: #9ca;
+}
+
+#copyright a {
+	color: #9ca;
+}
+
+/* #caa */
+
+#body input[type="submit"] {
+	background-color: #caa;
+}
