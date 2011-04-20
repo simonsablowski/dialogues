@@ -22,7 +22,9 @@ $configuration['Database'] = array(
 
 $configuration['Request'] = array(
 	'defaultQuery' => 'Dialogue/index',
-	'aliasQueries' => array()
+	'aliasQueries' => array(
+		'(\d+)' => 'Dialogue/show/$1'
+	)
 );
 
 $configuration['debugMode'] = TRUE;

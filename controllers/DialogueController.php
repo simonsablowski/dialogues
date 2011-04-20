@@ -11,6 +11,12 @@ class DialogueController extends Controller {
 		));
 	}
 	
+	public function show($id) {
+		$this->displayView('Dialogue.show.php', array(
+			'Dialogue' => Dialogue::find($id)
+		));
+	}
+	
 	public function add() {
 		$title = $this->getRequest()->getData('title');
 		$body = $this->getRequest()->getData('body');

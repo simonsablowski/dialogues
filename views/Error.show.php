@@ -8,21 +8,31 @@
 	</head>
 	<body>
 		<div id="document">
-<? $fields = array('Message'); if ($this->getApplication()->getConfiguration('debugMode')) $fields = array_merge($fields, array('Details', 'Trace')); ?>
+			<div id="head"></div>
+			<div id="body">
+				<div>
+					<h2>
+						<? echo $Error->getMessage(); ?>
+					</h2>
+					<div class="error">
+<? $fields = array(); if ($this->getApplication()->getConfiguration('debugMode')) $fields = array('Details', 'Trace'); ?>
 <? foreach ($fields as $n => $field): ?>
-					<div class="<? if ($n + 1 == count($fields)) echo 'last '; echo $n % 2 ? 'odd' : 'even'; ?>">
+						<div class="<? if ($n + 1 == count($fields)) echo 'last '; echo $n % 2 ? 'odd' : 'even'; ?>">
 <? $getter = 'get' . $field; ?>
 <? if ($field != 'Details' && $field != 'Trace'): ?>
-						<? echo $this->localize($Error->$getter()); ?>
+							<? echo $this->localize($Error->$getter()); ?>
 <? else: ?>
-						<div class="highlight">
-							<? var_dump($Error->$getter()); ?>
-						</div>
+							<div class="highlight">
+								<? var_dump($Error->$getter()); ?>
+							</div>
 <? endif; ?>
 
-						<p>&nbsp;</p>
-					</div>
+							<p>&nbsp;</p>
+						</div>
 <? endforeach; ?>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
